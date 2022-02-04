@@ -29,6 +29,9 @@ jobs:
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
     steps:
     - uses: actions/checkout@v2
+      with:
+        repository: ManageIQ/manageiq-schema
+        ref: master
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
